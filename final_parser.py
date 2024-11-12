@@ -366,7 +366,7 @@ def p_error(p):
         print("Syntax error at EOF")
 
 
-parser = yacc.yacc()
+parser = yacc.yacc(errorlog=yacc.NullLogger())
 filename = 'test.decaf'
 
 with open(filename, 'r') as file:
